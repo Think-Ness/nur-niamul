@@ -795,6 +795,19 @@
         checkBrowser()
     </script>
         <!-- end script -->
+
+        <script>
+          // Ambil parameter dari URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const guestName = urlParams.get('to');
+        
+          // Kalau ada nama tamu, masukkan ke elemen
+          if (guestName) {
+            document.getElementById('guestNameSlot').textContent = decodeURIComponent(guestName.replace(/\+/g, ' '));
+          }
+        </script>
+        
+
     <script>
         
     </script>
